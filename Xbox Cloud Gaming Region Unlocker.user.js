@@ -154,8 +154,6 @@
         updateSelectableMenuItem();
         applyRegionIp();
     } else {
-        initRegion();
-        applyRegionIp();
         console.warn("[Xbox Cloud Gaming Region Unlocker] your userscript extensions not support region select");
     }
 
