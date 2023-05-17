@@ -1,0 +1,10 @@
+cd /d "C:\Program Files\7-Zip"
+7z.exe x "D:\CHPAC_SRC\repository.rar" -o"%USERPROFILE%/.m2/" -y
+cd /d "D:\CHPAC_SRC"
+call npm install -g angular-cli-11.2.19.tgz
+@echo on
+SET Key="HKCU\Environment"
+FOR /F "usebackq tokens=2*" %%A IN (`REG QUERY %Key% /v PATH`) DO Set CurrPath=%%B
+ECHO %CurrPath% > user_path_bak.txt
+SETX PATH "%CurrPath%";"%APPDATA%\npm"
+@echo 設定完成
