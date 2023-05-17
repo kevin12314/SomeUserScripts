@@ -8,3 +8,9 @@ FOR /F "usebackq tokens=2*" %%A IN (`REG QUERY %Key% /v PATH`) DO Set CurrPath=%
 ECHO %CurrPath% > user_path_bak.txt
 SETX PATH "%CurrPath%";"%APPDATA%\npm"
 @echo 設定完成
+
+
+2023/05/17 16:15:36.303 WARN                       SQL Error: 0, SQLState: 08S01  
+2023/05/17 16:15:36.303 ERROR                      Connection reset  
+2023/05/17 16:15:36.303 WARN                       [c3p0] A PooledConnection that has already signalled a Connection error is still in use!  
+2023/05/17 16:15:36.303 WARN                       [c3p0] Another error has occurred [ com.microsoft.sqlserver.jdbc.SQLServerException: 連接已關閉。 ] which will not be reported to listeners!  com.microsoft.sqlserver.jdbc.SQLServerException: 連接已關閉。
